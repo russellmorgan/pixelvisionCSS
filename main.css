@@ -63,8 +63,7 @@ button {
     0px 0px 0px 0px;
     border-image-repeat:
     repeat repeat;
-    border-image-source:
-    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAIAAAC1nk4lAAAAAXNSR0IArs4c6QAAAJNJREFUaIHt1DEKg0AQRmFHBKu0uUFuZ0pvYRVyPO8yFukGrQJvXXhfs/BXjyk2chqKZcs6NfVd6zK2CfmP0RSjKfF7Mu/1Y1yJiF4vbTTFaIrRFKMpRlOMphhNMZpiNMVoitEUoylGU4ymGE0xmmI0xWiK0RSjKUZTjKbEJ59leu+PRjHn5tdeli4vbTTFaIrRlAPEugt+hJYSZwAAAABJRU5ErkJggg==");
+    border-image-source:url('img/btn-cta.png');
     border-style:solid;
     width: 360px;
 }
