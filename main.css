@@ -49,12 +49,8 @@
 button {
     font-family: "pixelvision-4x8";
     color: var(--cta-text);
-    padding: 0.3rem 1rem 0.6rem 1rem;
     font-size: 2rem;
     text-shadow:1px 1px var(--background);
-    margin: 1rem 0rem;
-    position: relative;
-    overflow: hidden;
     border-image-slice:6 6 8 6 fill;
     border-image-width:6px 6px 8px 8px;
     border-image-outset: 0px 0px 0px 0px;
@@ -62,6 +58,8 @@ button {
     border-image-source:url('img/btn-cta.svg');
     border-style:solid;
     background: transparent;
+    overflow:hidden;
+    text-align: center;
 }
 
 /* Components */
