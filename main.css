@@ -1,36 +1,48 @@
 :root {
   /* Color */
-  --text-color: #222222;
-  --surface: #c0c0c0;
-  --button-highlight: #ffffff;
-  --button-face: #dfdfdf;
-  --button-shadow: #808080;
-  --window-frame: #0a0a0a;
-  --dialog-blue: #000080;
-  --dialog-blue-light: #1084d0;
-  --dialog-gray: #808080;
-  --dialog-gray-light: #b5b5b5;
-  --link-blue: #0000ff;
+  --text-color: #937ac5;
+  --background: #564b67;
+  --cta: #f7db53;
 
+  /* Font Sizes */
+  --base-font-size: 2rem;
 
-  @font-face {
-  font-family: "Pixelated MS Sans Serif";
-  src: url("fonts/converted/ms_sans_serif.woff") format("woff");
-  src: url("fonts/converted/ms_sans_serif.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  body {
+    text-transform: uppercase;
+    background-color: var(--background);
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+  }
 }
+
+/* Font definitions */
 
 @font-face {
-  font-family: "Pixelated MS Sans Serif";
-  src: url("fonts/converted/ms_sans_serif_bold.woff") format("woff");
-  src: url("fonts/converted/ms_sans_serif_bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-}
+    font-family: "pixelvision-4x8";
+    src: url("fonts/pixel4x8.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    }
 
-}
+@font-face {
+    font-family: "pixelvision-4x5";
+    src: url("fonts/pixel4x5.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    }
 
-body {
-    background-color: var(--button-shadow);
-}
+@font-face {
+    font-family: "pixelvision-8x8";
+    src: url("fonts/pixel8x8WideBold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: bold;
+    }
+
+/* Components */
+    
+.hello {
+    padding:12px;
+    border: 1px solid #000;
+    font-family: "pixelvision-4x8";
+    
+}    
