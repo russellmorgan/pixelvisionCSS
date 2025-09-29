@@ -1,0 +1,36 @@
+:root {
+  /* Color */
+  --text-color: #222222;
+  --surface: #c0c0c0;
+  --button-highlight: #ffffff;
+  --button-face: #dfdfdf;
+  --button-shadow: #808080;
+  --window-frame: #0a0a0a;
+  --dialog-blue: #000080;
+  --dialog-blue-light: #1084d0;
+  --dialog-gray: #808080;
+  --dialog-gray-light: #b5b5b5;
+  --link-blue: #0000ff;
+
+
+  @font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url("fonts/converted/ms_sans_serif.woff") format("woff");
+  src: url("fonts/converted/ms_sans_serif.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url("fonts/converted/ms_sans_serif_bold.woff") format("woff");
+  src: url("fonts/converted/ms_sans_serif_bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+}
+
+body {
+    background-color: var(--button-shadow);
+}
