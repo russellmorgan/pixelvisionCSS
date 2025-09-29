@@ -56,6 +56,16 @@ button {
     position: relative;
     overflow: hidden;
     writing-mode: horizontal-tb;
+    border-image-slice:6 6 8 6;
+    border-image-width:
+    6px 6px 8px 8px;
+    border-image-outset:
+    0px 0px 0px 0px;
+    border-image-repeat:
+    repeat repeat;
+    border-image-source:url('img/btn-cta.png');
+    border-style:solid;
+    width: 360px;
 }
 
 /* Components */
