@@ -8,6 +8,7 @@
   --cta-shadow: #c5754a;
   --border-primary: #9076bf;
   --border-secondary: #2d1c2e;
+  --modal-background: #d0c0aa;
 
   /* Font Sizes */
   --base-font-size: 2rem;
@@ -46,7 +47,6 @@
 /* Tag Overrides */
 
 button {
-    background-color: var(--cta);
     font-family: "pixelvision-4x8";
     color: var(--cta-text);
     padding: 0.3rem 1rem 0.6rem 1rem;
@@ -56,16 +56,13 @@ button {
     position: relative;
     overflow: hidden;
     writing-mode: horizontal-tb;
-    border-image-slice:6 6 8 6;
-    border-image-width:
-    6px 6px 8px 8px;
-    border-image-outset:
-    0px 0px 0px 0px;
-    border-image-repeat:
-    repeat repeat;
+    border-image-slice:6 6 8 6 fill;
+    border-image-width:6px 6px 8px 8px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat:repeat repeat;
     border-image-source:url('img/btn-cta.png');
     border-style:solid;
-    width: 360px;
+    background: transparent;
 }
 
 /* Components */
@@ -74,4 +71,22 @@ button {
     padding:12px;
     border: 1px solid #000;
     font-family: "pixelvision-4x8";  
-}    
+}
+
+.modal {
+    background: var(--background-secondary);
+    border:4px solid var(--background-secondary);
+    color:#fff;
+    font-family: "pixelvision-4x8";
+    text-align: center;
+}
+
+.modal-inner {
+    background: var(--modal-background);
+    color: var(--border-secondary);
+    border:2px solid #fff;
+    border-right-color: #c4754a;
+    border-bottom-color: #c4754a;
+    margin-top:0.3rem;
+    padding:1rem;
+}
