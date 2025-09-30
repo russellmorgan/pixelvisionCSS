@@ -46,7 +46,7 @@
 
 /* Tag Overrides */
 
-button, .button {
+button {
     font-family: "pixelvision-4x8";
     color: var(--cta-text);
     font-size: 2rem;
@@ -69,6 +69,7 @@ button, .button {
     padding:12px;
     border: 1px solid var(--border-secondary);
     font-family: "pixelvision-4x8";  
+    margin: 2rem 1rem;
 }
 
 .modal {
@@ -86,5 +87,24 @@ button, .button {
     border-right-color: #c4754a;
     border-bottom-color: #c4754a;
     margin-top:0.3rem;
-    padding:1rem;
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+.button {
+    font-family: "pixelvision-4x8";
+    color: var(--cta-text);
+    font-size: 2rem;
+    text-shadow:1px 1px var(--background-secondary);
+    border-image-slice:12 12 16 12 fill;
+    border-image-width:12px 12px 16px 16px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat:repeat repeat;
+    border-image-source:url('img/btn-cta2x.png');
+    border-style:solid;
+    background: transparent;
+    overflow:hidden;
+    text-align: center;
+    padding: 0.3rem 1rem;
+    line-height: 2.5rem;
+    cursor: pointer;
 }
