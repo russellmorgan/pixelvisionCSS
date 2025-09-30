@@ -65,8 +65,8 @@ button {
 
 .button32x {
     border:32px solid transparent;
-    border-image-source:url('img/btn-cta96px.png');
-    border-image-slice: 32 fill;
+    border-image-source:url('img/btn-cta192px.png');
+    border-image-slice: 64 fill;
 }
 
 .cta {
