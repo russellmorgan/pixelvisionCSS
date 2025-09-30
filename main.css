@@ -108,3 +108,18 @@ button {
     line-height: 2.5rem;
     cursor: pointer;
 }
+
+.cta {
+    font-family: "pixelvision-4x8";
+    color: var(--cta-text);
+    font-size: 1rem;
+    width: auto;
+    height: auto;
+    min-height: 16px; 
+    border:16px solid transparent; /* size of the border image in general */
+    border-image-source:url('img/pv8-chrome-2x.png');
+    border-image-slice: 32 fill; /* size of the actual corner image you want */
+    margin: 0;
+    padding:0;
+    text-align: center;
+}
