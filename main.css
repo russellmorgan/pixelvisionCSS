@@ -85,7 +85,7 @@ button {
 
 .cta32x {
     border:32px solid transparent; /* size of the border image in general */
-    border-image-source:url('img/pv8-chrome-2x.png');
+    border-image-source:url('img/pv8-chrome-2x.svg');
     border-image-slice: 32 fill; /* size of the actual corner image you want. matches your source file */  
 }
 
