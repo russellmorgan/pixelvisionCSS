@@ -18,7 +18,28 @@
     background-color: var(--background);
     color: var(--text-color);
     font-size: var(--base-font-size);
+    margin: 2rem;
   }
+
+  /* Resetting margins, paddings, and borders */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    ol, ul {
+    list-style: none;
+    }
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+    img, fieldset {
+    border: 0;
+    }
+    input, input:focus {
+        outline: 0;
+    }
 }
 
 /* Font definitions */
@@ -46,19 +67,28 @@
 
 /* Tag Overrides */
 
-button {
+button, .button {
     font-family: "pixelvision-4x8";
     color: var(--cta-text);
     font-size: 2rem;
-    text-shadow:1px 1px var(--background-secondary);
+    text-shadow:1px 1px var(--border-secondary);
     overflow:hidden;
     text-align: center;
     padding:0;
     margin:0;
     background:transparent;
-    border:16px solid transparent;
+    border:8px solid transparent;
     border-image-source:url('img/btn-cta96px.png');
-    border-image-slice: 32 fill;
+    border-image-slice:20 fill;
+    border-image-outset: 0;
+    border-image-repeat: repeat;
+}
+
+button > span {
+    /* this corrects for bad baselines in the font */
+    position:relative;
+    top: -3px;
+    text-shadow:1px 1px var(--border-secondary);
 }
 
 button:active {
@@ -68,9 +98,13 @@ button:active {
 /* Components */
 
 .button32x {
+    /* Adjust the border width and the slice to match your source image */
     border:32px solid transparent;
     border-image-source:url('img/btn-cta192px.png');
     border-image-slice: 64 fill;
+    /* sample with a font that has a normal baseline */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
 }
 
 .cta {
@@ -79,9 +113,9 @@ button:active {
     font-size: 2rem;
     width: auto;
     height: auto;
-    border:16px solid transparent; /* size of the border image in general */
-    border-image-source:url('img/pv8-chrome-2x.png');
-    border-image-slice: 32 fill; /* size of the actual corner image you want. matches your source file */
+    border:8px solid transparent; /* size of the border image in general */
+    border-image-source:url('img/pv8-chrome-v2-2x.png');
+    border-image-slice: 8 fill; /* size of the actual corner image you want. matches your source file */
     margin: 0;
     padding:0;
     text-align: center;
@@ -94,13 +128,6 @@ button:active {
     border:32px solid transparent; /* size of the border image in general */
     border-image-source:url('img/pv8-chrome-2x.svg');
     border-image-slice: 32 fill; /* size of the actual corner image you want. matches your source file */  
-}
-
-.hello {
-    padding:12px;
-    border: 1px solid var(--border-secondary);
-    font-family: "pixelvision-4x8";  
-    margin: 2rem 1rem;
 }
 
 .modal {
@@ -118,5 +145,58 @@ button:active {
     border-right-color: #c4754a;
     border-bottom-color: #c4754a;
     margin-top:0.3rem;
-    padding: 0rem 1rem 1rem 1rem;
+    padding: 0.6rem 1rem 1rem 1rem; /* adjusts top spacing */
+}
+
+.form-component {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-wrapper {
+    border:8px solid transparent;
+    border-image-source:url('img/pv8-chrome-v2-2x.png');
+    border-image-slice: 8;
+    border-image-repeat: repeat;
+    padding:0;
+    position:relative;
+}
+
+.form-component input {
+    margin: 0;
+    padding:0;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-align: left;
+    border:0;
+    display: flex;
+    padding:0.3rem 0.6rem;
+    color:#fff;
+    background-color: #2d1b2e;
+    /* replace this with a background image if you want */
+    background: repeating-linear-gradient( -45deg, #564c67, #564c67 2px, #2d1b2e 2px, #2d1b2e 4px );
+}
+
+/* just using this to lay things out for you, safely delete */
+.tmp {
+    padding:12px;
+    border: 1px solid var(--border-secondary);
+    font-family: "pixelvision-4x8";  
+    margin: 2rem 1rem;
+}
+
+.tmp > div.flex {
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.border-notched {
+    background: var(--background-secondary);
+    border:2px solid var(--border-primary);
+    outline:2px solid var(--background-secondary);
+    border-radius:2px;
+    corner-shape:notch;
+    padding:0.3rem 1rem;
 }
