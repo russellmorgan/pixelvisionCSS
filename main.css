@@ -1,5 +1,5 @@
 :root {
-  /* Color */
+  /* Colors (I gave up on figuring out names here, use an LLM to clean it up if you want to keep it) */
   --text-color: #937ac5;
   --background: #564b67;
   --background-secondary: #2d1c2e;
@@ -11,7 +11,7 @@
   --modal-background: #d0c0aa;
 
   /* Font Sizes */
-  --base-font-size: 2rem;
+  --base-font-size: 2rem; /* your font is soooo small */
 
   body {
     text-transform: uppercase;
@@ -21,7 +21,7 @@
     margin: 2rem;
   }
 
-  /* Resetting margins, paddings, and borders */
+  /* Global reset of margins, paddings, and borders */
     * {
     margin: 0;
     padding: 0;
@@ -65,7 +65,7 @@
     font-style: bold;
     }
 
-/* Tag Overrides */
+/* Tag Overrides, optional. you can just use classes instead */
 
 button, .button {
     font-family: "pixelvision-4x8";
@@ -92,7 +92,7 @@ button > span {
 }
 
 button:active {
-    opacity: 0.5;
+    opacity: 0.5; /* adjust this style to what you'd like the pressed version to look like */
 }
 
 /* Components */
@@ -154,28 +154,20 @@ button:active {
     align-items: flex-start;
 }
 
-.input-wrapper {
-    border:8px solid transparent;
-    border-image-source:url('img/pv8-chrome-v2-2x.png');
-    border-image-slice: 8;
-    border-image-repeat: repeat;
-    padding:0;
-    position:relative;
+.form-component > .slice9-bg {
+    margin:4px 0; /* example of me reducing the global margin values for labels */
 }
 
-.form-component input {
-    margin: 0;
-    padding:0;
-    white-space: nowrap;
-    text-transform: uppercase;
-    text-align: left;
-    border:0;
-    display: flex;
-    padding:0.3rem 0.6rem;
-    color:#fff;
-    background-color: #2d1b2e;
-    /* replace this with a background image if you want */
-    background: repeating-linear-gradient( -45deg, #564c67, #564c67 2px, #2d1b2e 2px, #2d1b2e 4px );
+.slice9-bg {
+    border:8px solid transparent;
+    border-image-source:url('img/slice-long.png');
+    border-image-slice: 8 fill;
+    border-image-repeat: round;
+    padding:0 8px; /* give your content some space as needed */
+    margin:8px 0; /* adjust this spacing globally or add helper classes or parent > child relationships */
+    position:relative;
+    color: #fff;
+    background: transparent;
 }
 
 /* just using this to lay things out for you, safely delete */
@@ -184,6 +176,10 @@ button:active {
     border: 1px solid var(--border-secondary);
     font-family: "pixelvision-4x8";  
     margin: 2rem 1rem;
+}
+
+.tmp p {
+    padding:8px 0;
 }
 
 .tmp > div.flex {
